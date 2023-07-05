@@ -1,5 +1,7 @@
 @extends('adminlte::page')
-
+@section('adminlte_css_pre')
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+@stop
 @section('title', 'Dashboard')
 
 @section('content_header')

@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'Laravel AdminLTE 3',
+    'title' => 'Fox Web',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -45,12 +45,12 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
-    'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-    'logo_img_class' => 'brand-image img-circle elevation-3',
+    'logo' => 'Fox Web',
+    'logo_img' => 'vendor/images/raposa.png',
+    'logo_img_class' => 'brand-image opacity-100',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'AdminLTE',
+    'logo_img_alt' => 'Fox Web',
 
     /*
     |--------------------------------------------------------------------------
@@ -187,10 +187,10 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => 'admin',
     'logout_url' => 'logout',
     'login_url' => 'login',
-    'register_url' => 'register',
+    'register_url' => 'login',
     'password_reset_url' => 'password/reset',
     'password_email_url' => 'password/email',
     //'profile_url' => 'profile',
@@ -231,16 +231,97 @@ return [
         ],
         [
             'text' => 'Home',
-            'url'  => 'home',
+            'url'  => 'admin',
             'icon' => 'fas fa-house-user',
         ],
         [
             'text' => 'Dashboard',
-            'url'  => 'dashboard',
+            'url'  => 'admin/dashboard',
             'icon' => 'fas fa-tachometer-alt',
             //'can'  => 'is_admin',
         ],
-
+        [
+            'text'    => 'Clientes',
+            'icon'    => 'fas fa-fw fa-users',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-edit',
+                ],
+                [
+                    'text' => 'Adicionar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Projetos',
+            'icon'    => 'fas fa-fw fa-store',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-edit',
+                ],
+                [
+                    'text' => 'Adicionar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Produtos',
+            'icon'    => 'fas fa-fw fa-box',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-edit',
+                ],
+                [
+                    'text' => 'Adicionar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Profissionais',
+            'icon'    => 'fas fa-fw fa-user',
+            'can'     => 'is_admin',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-edit',
+                ],
+                [
+                    'text' => 'Adicionar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
+        [
+            'text'    => 'Usuários',
+            'icon'    => 'fas fa-fw fa-user',
+            'can'     => 'is_admin',
+            'submenu' => [
+                [
+                    'text' => 'Listar',
+                    'url'  => '#',
+                    'icon' => 'fas fa-edit',
+                ],
+                [
+                    'text' => 'Adicionar',
+                    'url'  => 'admin/users/create',
+                    'icon' => 'fas fa-plus',
+                ],
+            ],
+        ],
         /*
         //admin lte default menu
         [
@@ -265,44 +346,6 @@ return [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
-                ],
-            ],
         ],
         ['header' => 'labels'],
         [
