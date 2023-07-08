@@ -11,7 +11,7 @@
             <div class="col-4 col-md-4 text-center">
                 <img src="img/icon_cloud.svg" alt="Icone de nuvem" class="img-fluid w-25">
                 <h2 class="h2">
-                    Titulo 1
+                    Lucas
                 </h2>
                 <p>
                     E-mail institucional
